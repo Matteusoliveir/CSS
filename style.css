@@ -1,40 +1,35 @@
-/* Transições suaves para botões e campos */
-button, input {
-    transition: background-color 0.3s ease, transform 0.2s ease;
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Efeito de hover nos botões */
-button:hover {
-    background-color: #FF5722;
-    transform: scale(1.05);
-}
-
-/* Foco nos campos de input */
-input:focus {
-    border: 2px solid #FF6600;
-    background-color: #333;
-}
-
-/* Definições gerais de estilo */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-    color: #fff;
-    padding: 0;
-    margin: 0;
+    background-color: #222;
+    color: white;
 }
 
+/* Cabeçalho */
 header {
     background-color: #1c1c1c;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-header .logo img {
-    width: 40px;
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    font-size: 40px;  /* Tamanho do ícone */
+    color: #FF6600;  /* Cor do ícone */
     margin-right: 10px;
 }
 
@@ -63,6 +58,39 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* Seção Home */
+.home {
+    background-color: #333;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.home .content h2 {
+    font-size: 40px;
+    color: #FF6600;
+    margin-bottom: 20px;
+}
+
+.home .content p {
+    font-size: 18px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.home .content .btn {
+    background-color: #FF6600;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.home .content .btn:hover {
+    background-color: #e55b00;
+}
+
+/* Rodapé */
 footer {
     background-color: #1c1c1c;
     color: white;
@@ -72,46 +100,4 @@ footer {
 
 footer p {
     font-size: 14px;
-}
-
-/* Página de Cadastro */
-.cadastro {
-    padding: 40px;
-    background-color: #222;
-    text-align: center;
-}
-
-.cadastro form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #333;
-    border-radius: 8px;
-}
-
-.cadastro form input, .cadastro form button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-}
-
-.cadastro form input[type="text"],
-.cadastro form input[type="password"] {
-    font-size: 16px;
-}
-
-button {
-    background-color: #FF6600;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e55b00;
-}
-
-.cadastro button {
-    font-size: 18px;
 }
