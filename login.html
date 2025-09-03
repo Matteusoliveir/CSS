@@ -6,9 +6,11 @@
     <title>Login - Body Fitness</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
         <div class="logo">
             <i class="fas fa-dumbbell logo-img"></i>
@@ -19,24 +21,31 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Área de Login -->
     <section class="login">
-        <h2>Entrar na Body Fitness</h2>
-        <form id="loginForm" onsubmit="handleLogin(event)">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-            
-            <button type="submit">Entrar</button>
-        </form>
+        <div class="form-card">
+            <h2><i class="fas fa-sign-in-alt"></i> Entrar</h2>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <p class="extra">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
     </section>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 Body Fitness. Todos os direitos reservados.</p>
     </footer>
